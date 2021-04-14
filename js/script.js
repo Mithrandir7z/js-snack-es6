@@ -145,9 +145,9 @@ for ( let i = 0; i < squadre.length; i++ ) {
     thisObject.punti_fatti = Math.floor(Math.random() * 101);
     thisObject.falli_subiti = Math.floor(Math.random() * 101);
 
-    var {nome, falli_subiti} = thisObject;
+    let {nome, falli_subiti} = thisObject;
 
-    var oggettoAggiornato = {
+    let oggettoAggiornato = {
         nome, 
         falli_subiti
     };

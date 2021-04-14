@@ -10,7 +10,7 @@
 
 
 // Ex 1 
-console.log("Ex 1");
+console.log("Ex 1 --------------------------------");
 
 //Creare un array di oggetti: Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 let bici = [
@@ -80,4 +80,89 @@ biciPiuLeggera = `
 `;
 
 document.getElementById("print").innerHTML = biciPiuLeggera;
+
+
+
+
+
+
+
+
+// Ex 2 Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti. 
+// Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0. 
+// Generare numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti. 
+// Infine usando la destrutturazione creiamo un nuovo array di oggetti i cui elementi contengono solo nomi e falli subiti 
+// e stampiamo tutto in console.
+
+
+//Ex 2
+console.log("Ex 2 --------------------------------");
+
+//Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+// Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.  
+let squadre = [
+    {
+        'nome': 'Juventus',
+        'punti_fatti': 0,
+        'falli_subiti': 0
+    } ,
+    {
+        'nome': 'Inter',
+        'punti_fatti': 0,
+        'falli_subiti': 0
+    } ,
+    {
+        'nome': 'Milan',
+        'punti_fatti': 0,
+        'falli_subiti': 0
+    } ,
+    {
+        'nome': 'Roma',
+        'punti_fatti': 0,
+        'falli_subiti': 0
+    } ,
+    {
+        'nome': 'Fiorentina',
+        'punti_fatti': 0,
+        'falli_subiti': 0
+    } ,
+    {
+        'nome': 'Lazio',
+        'punti_fatti': 0,
+        'falli_subiti': 0
+    } ,
+    {
+        'nome': 'Lecce',
+        'punti_fatti': 0,
+        'falli_subiti': 0
+    } ,
+];
+
+
+//Generare numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti.
+
+//Infine usando la destrutturazione creiamo un nuovo array di oggetti i cui elementi contengono solo nomi e falli subiti 
+// e stampiamo tutto in console.
+let squadreAggiornate = [];
+
+for ( let i = 0; i < squadre.length; i++ ) {
+    let thisObject = squadre[i];
+
+    thisObject.punti_fatti = Math.floor(Math.random() * 101);
+    thisObject.falli_subiti = Math.floor(Math.random() * 101);
+
+    var {nome, falli_subiti} = thisObject;
+
+    var oggettoAggiornato = {
+        nome, 
+        falli_subiti
+    };
+
+    squadreAggiornate.push(oggettoAggiornato);
+}
+
+console.log(squadre);
+
+console.log("squadre aggiornate array -->", squadreAggiornate);
+
 

@@ -39,22 +39,18 @@ let bici = [
 console.log(bici);
 
 // Stampare a schermo la bici con peso minore utilizzando destructuring e template literal Snack
-let pesoMinore = bici[0].peso;
+
+
+let biciPiuLeggera = bici[0];
 
 
 // --> Leggere intanto i dati con un for e determinare la bici col peso minore
 for ( let i = 0; i < bici.length; i++ ) {
     let thisObject = bici[i];
 
-    if (thisObject.peso < pesoMinore) {
-        pesoMinore = thisObject.peso;
-
-        var {nome, peso} = thisObject;
+    if (thisObject.peso < biciPiuLeggera.peso) {
         
-        var biciPiuLeggera = {
-            nome,
-            peso
-        };
+        biciPiuLeggera = thisObject;
     }
     
 }
@@ -64,6 +60,8 @@ for ( let i = 0; i < bici.length; i++ ) {
 // Dopo di che destrutturare quell'array con peso minore e stamparlo in un ul li col template literal.
 
 console.log("la bici più leggera è --->", biciPiuLeggera);
+
+let { nome, peso } = biciPiuLeggera;
 
 biciPiuLeggera = `
 

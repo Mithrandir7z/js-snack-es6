@@ -59,10 +59,6 @@ for ( let i = 0; i < bici.length; i++ ) {
     
 }
 
-console.log("La bicicletta più leggera è di: ", pesoMinore, "kg");
-
-console.log(nome);
-console.log(peso);
 
 
 // Dopo di che destrutturare quell'array con peso minore e stamparlo in un ul li col template literal.
